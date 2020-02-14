@@ -18,6 +18,7 @@ class CreateProcessRequestsTable extends Migration
             $table->timestamp('date_from');
             $table->timestamp('date_to');
             $table->unsignedBigInteger('camera_id');
+            $table->string('state');
             $table->timestamps();
             $table->foreign('camera_id')->references('id')->on('cameras');
         });
